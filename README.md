@@ -18,6 +18,8 @@ Full automated bot thats claims the Stormgain Miner,
   ```shell
     python3 stormgain.py
     ``` 
-  
+
+# Additional
+
 * if you need support:
   * [Join Discord](https://discord.gg/YcDZskNUMp)
