@@ -1,5 +1,5 @@
 # Stormgain_Bot
-Full automated bot thats claims the Stormgain Miner, 
+Full automated bot thats claims the Stormgain Miner, only for test purposes and learning!
 
 
 # To do:
@@ -20,6 +20,6 @@ Full automated bot thats claims the Stormgain Miner,
     ``` 
 
 # Additional
-
+* [Here you can rent a fast and cheap VPS!](https://deinserverhost.de/store/aff.php?aff=3606)
 * if you need support:
   * [Join Discord](https://discord.gg/YcDZskNUMp)
