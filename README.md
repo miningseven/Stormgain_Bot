@@ -1,5 +1,7 @@
 # Stormgain_Bot
 Full automated bot thats claims the Stormgain Miner, only for test purposes and learning!
+The folder assignments are currently set to windows.
+
 
 
 # To do:
