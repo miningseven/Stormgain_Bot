@@ -8,8 +8,8 @@ a full automated bot thats claim for you Stormgains Miner
   ```shell
      python3 -m pip install selenium 
    ```
-* fill settings.json with your userdata and
-* start it:
+* fill settings.json with your userdata
+* run:
   ```shell
     python3 stormgain.py
     ``` 
