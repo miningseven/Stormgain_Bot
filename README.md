@@ -1,6 +1,6 @@
 # Stormgain_Bot
-a full automated bot thats claim for you Stormgains Miner
-.
+Full automated bot thats claims the Stormgain Miner, 
+
 
 # To do:
 * [Please register with a new account using the reflink from my buddy!](http://github.com)
@@ -8,13 +8,16 @@ a full automated bot thats claim for you Stormgains Miner
   ```shell
      python3 -m pip install selenium 
    ```
+* Download the last Version from chromedriver.exe:
+  * [chromedriver download](https://chromedriver.chromium.org/)
+  * Place chromedriver.exe inside stormgain.py folder!
+  * Make sure that Chromedriver and ChromeBrowser are on the same version!
+
 * fill settings.json with your userdata
 * run:
   ```shell
     python3 stormgain.py
     ``` 
-* Download the last Version from chromedriver.exe:
-  * [chromedriver download](https://chromedriver.chromium.org/)
-  * Place chromedriver.exe inside stormgain.py folder!
-  * Update your chromebrowser!!
-* [Join Discord :)](https://discord.gg/YcDZskNUMp)
+  
+* if you need support:
+  * [Join Discord](https://discord.gg/YcDZskNUMp)
