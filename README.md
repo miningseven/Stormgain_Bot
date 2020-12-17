@@ -17,4 +17,4 @@ a full automated bot thats claim for you Stormgains Miner
   * [chromedriver download](https://chromedriver.chromium.org/)
   * Place chromedriver.exe inside stormgain.py folder!
   * Update your chromebrowser!!
-
+* [Join Discord :)](https://discord.gg/YcDZskNUMp)
