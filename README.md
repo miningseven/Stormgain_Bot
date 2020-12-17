@@ -14,7 +14,7 @@ a full automated bot thats claim for you Stormgains Miner
     python3 stormgain.py
     ``` 
 * Download the last Version from chromedriver.exe:
-> [chromedriver download](https://chromedriver.chromium.org/)
-> Place chromedriver.exe inside stormgain.py folder!
-> Update your chromebrowser!!
+  * [chromedriver download](https://chromedriver.chromium.org/)
+  * Place chromedriver.exe inside stormgain.py folder!
+  * Update your chromebrowser!!
 
