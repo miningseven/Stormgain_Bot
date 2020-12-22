@@ -42,7 +42,7 @@ class browserstarter:
         self.driver.close()
         print('Miner is Activ!\nNext Claim in',sleeptime, 'sec')
         time.sleep(sleeptime)
-        start.stormgain()
+        start.start()
 
     def shortsleep(self):
         print('Short Sleep Triggert!\nClose Browser!')
