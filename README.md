@@ -5,7 +5,7 @@ The folder assignments are currently set to windows.
 
 
 # To do:
-* [Please register with a new account using the reflink from my buddy!](http://github.com)
+* [Please register with a new account using the reflink from my buddy!](https://app.stormgain.com/friend/BNS16257368)
 * Install Python3+:
   ```shell
      python3 -m pip install selenium 
