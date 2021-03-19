@@ -1,11 +1,11 @@
 # Stormgain_Bot
 Full automated bot thats claims the Stormgain Miner, only for test purposes and learning!
-The folder assignments are currently set to windows.
+The folder assignments are currently set to mac / linux.
 
 
 
 # To do:
-* [Please register with a new account using the reflink from my buddy!](https://app.stormgain.com/friend/BNS16257368)
+* [Please register with a new account using the reflink from my buddy!](https://app.stormgain.com/friend/BNS28075633)
 * If you don't know Python then please have a look at the [RELEASES](https://github.com/miningseven/Stormgain_Bot/releases).
 * Install Python3+:
   ```shell
@@ -21,8 +21,3 @@ The folder assignments are currently set to windows.
   ```shell
     python3 stormgain.py
     ``` 
-
-# Additional
-* [Here you can rent a fast and cheap VPS!](https://deinserverhost.de/store/aff.php?aff=3606)
-* if you need support:
-  * [Join Discord](https://discord.gg/YcDZskNUMp)
