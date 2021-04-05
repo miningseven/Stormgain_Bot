@@ -84,18 +84,20 @@ class browserstarter:
             self.driver.get('https://app.stormgain.com/crypto-miner/')
             time.sleep(randint(3,10))
             self.driver.switch_to.frame(0)
-            start.checkusdt()
+            start.checkusdt() #Here the path of the USD credit must be renewed
             self.driver.refresh()
             time.sleep(randint(3,10))
-            self.driver.switch_to.frame(0)
-        except:
+            #self.driver.switch_to.frame(0) #Sometimes it is needed, sometimes not. Try 
+        except Exception as e:
+            print(e)
             start.shortsleep()
         try:
             self.driver.find_element(By.CSS_SELECTOR, ".font-medium > .text-17").click()
             time.sleep(randint(3,6))
             print('Miner is Activ!')
             start.stormgainsleeper()
-        except:
+        except Exception as e:
+            print(e)
             print('Someting Wrong, Getting Short Sleep!')
             start.shortsleep()
 
