@@ -63,7 +63,7 @@ class browserstarter:
 
     def checkusdt(self):
         try:
-            html = self.driver.find_element(By.CSS_SELECTOR, ".md\\3Atext-15 > span:nth-child(1)").get_attribute('innerHTML') #<-- Here the path of the USD credit must be renewed
+            html = self.driver.find_element_by_xpath('//*[@id="region-main"]/div/div[2]/div/div[2]/div/div/div[1]/div[2]/span[1]').get_attribute('innerHTML')
             usdt = html.replace('≈','')
             print('You have Mined '+str(usdt)+'$')
             if float(usdt) >= float(10):
@@ -83,8 +83,8 @@ class browserstarter:
             time.sleep(randint(3,6))
             self.driver.get('https://app.stormgain.com/crypto-miner/')
             time.sleep(randint(3,10))
-            self.driver.switch_to.frame(0)
-            #start.checkusdt() #path of the USD credit must be renewed
+            #self.driver.switch_to.frame(0)
+            start.checkusdt() 
             self.driver.refresh()
             time.sleep(randint(3,10))
             #self.driver.switch_to.frame(0) #Sometimes it is needed, sometimes not. Try 
