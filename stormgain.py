@@ -30,7 +30,7 @@ class browserstarter:
         chrome_driver = path +"\\chromedriver.exe"
         self.driver = webdriver.Chrome(chrome_options=chrome_options, executable_path=chrome_driver)
         self.vars = {}
-        self.driver.get("https://patrickhlauke.github.io/recaptcha/")
+        self.driver.get("https://trading-tigers.com")
         time.sleep(randint(3,6))
         os.system('cls')
         print("Browser started!")
@@ -80,27 +80,26 @@ class browserstarter:
             self.driver.find_element(By.ID, "password").send_keys(stormgainpw)
             time.sleep(randint(3,6))
             self.driver.find_element(By.CSS_SELECTOR, ".btn-login").click()
-            time.sleep(randint(3,6))
+            time.sleep(randint(10,25))
             self.driver.get('https://app.stormgain.com/crypto-miner/')
             time.sleep(randint(3,10))
             #self.driver.switch_to.frame(0)
-            start.checkusdt() 
+            start.checkusdt()
             self.driver.refresh()
             time.sleep(randint(3,10))
-            #self.driver.switch_to.frame(0) #Sometimes it is needed, sometimes not. Try 
-        except Exception as e:
-            print(e)
+            #self.driver.switch_to.frame(0)
+        except:
             start.shortsleep()
         try:
             self.driver.find_element(By.CSS_SELECTOR, ".font-medium > .text-17").click()
             time.sleep(randint(3,6))
             print('Miner is Activ!')
             start.stormgainsleeper()
-        except Exception as e:
-            print(e)
-            print('Someting Wrong, Getting Short Sleep!')
+        except:
+            print('Mining already active?\nGetting Short Sleep!')
             start.shortsleep()
-
+            if KeyboardInterrupt:
+                exit()
 
 start = browserstarter()
 start.start()
