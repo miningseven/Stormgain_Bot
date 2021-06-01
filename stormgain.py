@@ -93,7 +93,7 @@ class browserstarter:
 
     def checkusdt(self):
         try:
-            html = self.driver.find_element_by_xpath('//*[@id="region-main"]/div/div[2]/div/div[2]/div/div/div[1]/div[2]/span[1]').get_attribute('innerHTML')
+            html = self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/div/div[1]/div/div[2]/div/div[2]/div/div/div[1]/div[2]/span[1]').get_attribute('innerHTML')
             usdt = html.replace('≈','')
             print('You have Mined '+str(usdt)+'$')
             if float(usdt) >= float(10):
@@ -119,7 +119,7 @@ class browserstarter:
             time.sleep(randint(3,10))
             #self.driver.switch_to.frame(0)
             start.checkusdt()
-            self.driver.refresh()
+            #self.driver.refresh()
             time.sleep(randint(3,10))
             #self.driver.switch_to.frame(0)
         except:
