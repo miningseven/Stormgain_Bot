@@ -80,7 +80,7 @@ class browserstarter:
     def shortsleep(self):
         print('Short Sleep Triggered!\nClose Browser!')
         self.driver.close()
-        ran = randint(fromA, toB)
+        ran = randint(600, 1800)
         print("Sleep:",int(ran),"sec")
         time.sleep(ran)
         start.start()
