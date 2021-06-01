@@ -1,6 +1,6 @@
 # Stormgain\_Bot
 
-Full automated bot thats claims the StormGain Miner. A fork of [miningseven's original code](https://github.com/miningseven/Stormgain_Bot) re-written to be cross-platform.
+Full automated bot thats claims the StormGain Miner. For Educational purposes only.
 
 # Instructions
 
