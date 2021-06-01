@@ -15,7 +15,7 @@ Full automated bot thats claims the StormGain Miner. For Educational purposes on
 
 ### Linux
 
-* Set up a Linux environment with a desktop session or at least a headless desktop. Instructions for the Raspberry Pi [here](https://www.tomshardware.com/reviews/raspberry-pi-headless-setup-how-to,6028.html). (Headless will not work due to CAPTCHA.)
+* Set up a Linux environment
 * Clone this repository
 
 ```
@@ -37,7 +37,7 @@ sudo apt-get install chromium-chromedriver
 * Install the Python Selenium module
 
 ```
-   python3 -m pip install selenium 
+python3 -m pip install selenium 
 ```
 
 ### Windows
@@ -53,7 +53,7 @@ github clone https://github.com/korewaChino/Stormgain_Bot.git
 * Install the Python Selenium module
 
 ```
-   pip install selenium
+pip install selenium
 ```
 
 * [Download the ChromeDriver binary](https://chromedriver.chromium.org/) and put it in the same folder.
