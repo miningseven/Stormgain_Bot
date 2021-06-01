@@ -19,7 +19,7 @@ Full automated bot thats claims the StormGain Miner. A fork of [miningseven's o
 * Clone this repository
 
 ```
-github clone [https://github.com/korewaChino/Stormgain\_Bot.git](https://github.com/korewaChino/Stormgain_Bot.git)
+github clone https://github.com/korewaChino/Stormgain_Bot.git
 ```
 
 * Install Python 3 (Depends on distribution)<span style="font-family: var(--vscode-editor-font-family); font-size: 1em; font-weight: var(--vscode-editor-font-weight); color: var(--vscode-unotes-wysText);"></span>
