@@ -20,6 +20,7 @@ toB = config['stormgainsleepMAX']
 path = os.getcwd()+'\\'
 chrome_options = Options()
 chrome_options.add_argument('--window-size=1600x800')
+chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument(path)
 
 
@@ -27,12 +28,22 @@ chrome_options.add_argument(path)
 class browserstarter:
 
     def start(self):
-        chrome_driver = path +"\\chromedriver.exe"
-        self.driver = webdriver.Chrome(chrome_options=chrome_options, executable_path=chrome_driver)
+        if os.name == 'nt':
+            execpath = path +"\\chromedriver.exe"
+            self.driver = webdriver.Chrome(options=chrome_options, executable_path=path +"\\chromedriver.exe")
+            
+        else:
+            #chrome_options.add_argument('--headless')
+            execpath = '/usr/bin/chromedriver'
+        #self.driver = webdriver.Chrome(options=chrome_options, executable_path=execpath)
+        self.driver = webdriver.Chrome(options=chrome_options, executable_path=execpath)
         self.vars = {}
-        self.driver.get("https://patrickhlauke.github.io/recaptcha/")
+        self.driver.get("https://example.com")
         time.sleep(randint(3,6))
-        os.system('cls')
+        if os.name == 'nt':
+            os.system('cls')
+        else:
+            os.system('clear')
         print("Browser started!")
         start.stormgain()
 
@@ -42,15 +53,15 @@ class browserstarter:
     def stormgainsleeper(self):
         sleeptime = randint(fromA, toB)
         self.driver.close()
-        print('Miner is Activ!\nNext Claim in',sleeptime, 'sec')
+        print('Miner is Active!\nNext Claim in',sleeptime, 'sec')
         time.sleep(sleeptime)
         start.start()
 
 
     def shortsleep(self):
-        print('Short Sleep Triggert!\nClose Browser!')
+        print('Short Sleep Triggered!\nClose Browser!')
         self.driver.close()
-        ran = randint(1000,3000)
+        ran = randint(fromA, toB)
         print("Sleep:",int(ran),"sec")
         time.sleep(ran)
         start.start()
@@ -74,12 +85,16 @@ class browserstarter:
 
     def stormgain(self):
         try:
-            self.driver.get("https://app.stormgain.com/#modal_login")     
+            self.driver.get("https://app.stormgain.com/#modal_login")
+            print('Logging in...')     
             time.sleep(randint(3,6))
             self.driver.find_element(By.ID, "email").send_keys(stormgainemail)
+            print('Inserting Email...')
             self.driver.find_element(By.ID, "password").send_keys(stormgainpw)
+            print('Inserting Password...')
             time.sleep(randint(3,6))
             self.driver.find_element(By.CSS_SELECTOR, ".btn-login").click()
+            print('Clicking Login...')
             time.sleep(randint(3,6))
             self.driver.get('https://app.stormgain.com/crypto-miner/')
             time.sleep(randint(3,10))
@@ -93,10 +108,10 @@ class browserstarter:
         try:
             self.driver.find_element(By.CSS_SELECTOR, ".font-medium > .text-17").click()
             time.sleep(randint(3,6))
-            print('Miner is Activ!')
+            print('Miner is Active!')
             start.stormgainsleeper()
         except:
-            print('Someting Wrong, Getting Short Sleep!')
+            print('Mining already active?\nGetting Short Sleep!')
             start.shortsleep()
 
 
