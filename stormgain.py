@@ -115,11 +115,11 @@ class browserstarter:
             time.sleep(randint(3,6))
             self.driver.get('https://app.stormgain.com/crypto-miner/')
             time.sleep(randint(3,10))
-            self.driver.switch_to.frame(0)
+            #self.driver.switch_to.frame(0)
             start.checkusdt()
             self.driver.refresh()
             time.sleep(randint(3,10))
-            self.driver.switch_to.frame(0)
+            #self.driver.switch_to.frame(0)
         except:
             start.shortsleep()
         try:
