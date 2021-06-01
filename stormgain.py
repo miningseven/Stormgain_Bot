@@ -74,7 +74,7 @@ class browserstarter:
 
     def checkusdt(self):
         try:
-            html = self.driver.find_element(By.CSS_SELECTOR, ".md\\3Atext-15 > span:nth-child(1)").get_attribute('innerHTML')
+            html = self.driver.find_element_by_xpath('//*[@id="region-main"]/div/div[2]/div/div[2]/div/div/div[1]/div[2]/span[1]').get_attribute('innerHTML')
             usdt = html.replace('≈','')
             print('You have Mined '+str(usdt)+'$')
             if float(usdt) >= float(10):
@@ -98,11 +98,11 @@ class browserstarter:
             time.sleep(randint(3,6))
             self.driver.get('https://app.stormgain.com/crypto-miner/')
             time.sleep(randint(3,10))
-            self.driver.switch_to.frame(0)
+            #self.driver.switch_to.frame(0)
             start.checkusdt()
             self.driver.refresh()
             time.sleep(randint(3,10))
-            self.driver.switch_to.frame(0)
+            #self.driver.switch_to.frame(0)
         except:
             start.shortsleep()
         try:
@@ -113,7 +113,8 @@ class browserstarter:
         except:
             print('Mining already active?\nGetting Short Sleep!')
             start.shortsleep()
-
+            if KeyboardInterrupt:
+                exit()
 
 start = browserstarter()
 start.start()
