@@ -38,8 +38,6 @@ class browserstarter:
         #self.driver = webdriver.Chrome(options=chrome_options, executable_path=execpath)
         self.driver = webdriver.Chrome(options=chrome_options, executable_path=execpath)
         self.vars = {}
-        self.driver.get("https://example.com")
-        time.sleep(randint(3,6))
         if os.name == 'nt':
             os.system('cls')
         else:
