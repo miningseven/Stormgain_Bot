@@ -2,6 +2,7 @@
     "stormgain_email": "",
     "stormgain_pw": "",
     "stormgainsleepMIN": 14400,
-    "stormgainsleepMAX": 18000
+    "stormgainsleepMAX": 18000,
+    "chromedriver_path": "\\chromedriver.exe"
 }
     

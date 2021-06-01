@@ -1,5 +1,7 @@
+from platform import platform
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common import keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions
@@ -8,6 +10,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import time
 import os
+import platform
 import json
 from  random import randint
 
@@ -28,20 +31,36 @@ chrome_options.add_argument(path)
 class browserstarter:
 
     def start(self):
-        if os.name == 'nt':
-            execpath = path +"\\chromedriver.exe"
-            self.driver = webdriver.Chrome(options=chrome_options, executable_path=path +"\\chromedriver.exe")
+        try:
+            if "chromedriver_path" in config:
+                execpath = path+ config['chromedriver_path']
+            else:
+                raise Exception
+        except:
+            print("chromedriver_path not set, assuming default directory by OS...")
+            #OS Check
+            ##Windows
+            if platform.system() == 'Windows':
+                execpath = path +"\\chromedriver.exe"
+            #macOS
+            elif platform.system() == 'Darwin':
+                execpath = '/usr/local/bin/chromedriver'
+            ##Linux
+            elif platform.system() == 'Linux':
+                execpath = '/usr/bin/chromedriver'
+            ##None Detected
+            else:
+                raise SystemExit('OS not recognized and no custom path has been found. Exiting...')
+        
             
-        else:
-            #chrome_options.add_argument('--headless')
-            execpath = '/usr/bin/chromedriver'
-        #self.driver = webdriver.Chrome(options=chrome_options, executable_path=execpath)
         self.driver = webdriver.Chrome(options=chrome_options, executable_path=execpath)
-        self.vars = {}
+        
+        #Clear Check
         if os.name == 'nt':
             os.system('cls')
         else:
             os.system('clear')
+            
         print("Browser started!")
         start.stormgain()
 
@@ -96,11 +115,11 @@ class browserstarter:
             time.sleep(randint(3,6))
             self.driver.get('https://app.stormgain.com/crypto-miner/')
             time.sleep(randint(3,10))
-            #self.driver.switch_to.frame(0)
+            self.driver.switch_to.frame(0)
             start.checkusdt()
             self.driver.refresh()
             time.sleep(randint(3,10))
-            #self.driver.switch_to.frame(0)
+            self.driver.switch_to.frame(0)
         except:
             start.shortsleep()
         try:
