@@ -2,3 +2,6 @@ settings.json
 .vscode/
 *.exe
 .unotes
+extensions/
+UserData/
+*.pyc
