@@ -1,6 +1,6 @@
 # Stormgain\_Bot
 
-Full automated bot thats claims the StormGain Miner. For Educational purposes only.
+Fully automated bot thats claims the StormGain Miner. For Educational purposes only.
 
 # Instructions
 
@@ -34,10 +34,10 @@ sudo apt install python3
 sudo apt-get install chromium-chromedriver
 ```
 
-* Install the Python Selenium module
+* Install dependencies
 
 ```
-python3 -m pip install selenium 
+python3 -m pip install -r requirements.txt
 ```
 
 ### Windows
@@ -50,10 +50,10 @@ github clone https://github.com/korewaChino/Stormgain_Bot.git
 ```
 
 * [Install Python](https://www.python.org/downloads/)
-* Install the Python Selenium module
+* Install dependencies
 
 ```
-pip install selenium
+pip install -r requirements.txt
 ```
 
 * [Download the ChromeDriver binary](https://chromedriver.chromium.org/) and put it in the same folder.
