@@ -3,6 +3,8 @@
     "stormgain_pw": "",
     "stormgainsleepMIN": 14400,
     "stormgainsleepMAX": 18000,
-    "chromedriver_path": "\\chromedriver.exe"
+    "chromedriver_path": "./chromedriver.exe",
+    "headless_mode": false,
+    "localUserData": true
 }
     
