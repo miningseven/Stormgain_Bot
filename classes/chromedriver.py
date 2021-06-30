@@ -1,13 +1,12 @@
-import json
-import os
-import platform
 from logging import warn
+from user_agent import generate_user_agent
 from platform import platform
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from user_agent import generate_user_agent
 
+import os
+import platform
+import json
 from classes.error import *
 
 with open ('./settings.json') as config_file:
@@ -18,9 +17,6 @@ path = os.getcwd()+'\\'
 options = Options()
 #Launch Arguments
 useragent = 'User-Agent=' + generate_user_agent(navigator=["chrome", "firefox"])
-
-
-
 arguments = [
         '--no-sandbox',
         useragent,

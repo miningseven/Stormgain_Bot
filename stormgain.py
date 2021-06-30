@@ -1,24 +1,13 @@
 #!/usr/bin/env python3.9
 import json
 import os
-import platform
-import sys
 import time
-from logging import debug, error, exception, warn
-from platform import platform
+from logging import debug, error
 from random import randint
 
-from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common import keys
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-from user_agent import generate_user_agent
 
 from classes.chromedriver import driver
 from classes.error import *
